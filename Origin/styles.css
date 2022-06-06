@@ -444,3 +444,161 @@ body.menu-expanded .open-menu {
   visibility: visible;
   transform: translateY(0);
 }
+
+@media (min-width: 1024px) {
+  /*Geral*/
+  .wrapper {
+    width: min(112rem, 100%);
+    display: grid;
+  }
+
+  .col-a {
+    grid-area: A;
+  }
+
+  .col-b {
+    grid-area: B;
+  }
+  /* reset */
+  nav#navigate .wrapper * {
+    margin: 0;
+    padding: 0;
+    visibility: initial;
+    display: initial;
+    opacity: initial;
+    transform: initial;
+    color: initial;
+    background-color: initial;
+  }
+
+  nav#navigate .close-menu,
+  nav#navigate .open-menu,
+  nav#navigate .social-links {
+    display: none;
+  }
+
+  /*Navigation*/
+
+  nav#navigate .menu {
+    display: none;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%; */
+  }
+
+  /************************ HOME ***************************/
+
+  #home {
+    grid-template-columns: 60.5rem 1fr;
+    grid-template-areas: 'A B' 'C C';
+    padding-top: var(--nav-heigth);
+  }
+
+  #home .col-a {
+    align-self: center;
+    text-align: left;
+  }
+
+  #home .col-a button {
+    margin: 0;
+  }
+
+  #home .stats {
+    grid-area: C;
+    align-self: center;
+    flex-direction: row;
+    width: 112rem;
+    justify-content: center;
+  }
+
+  #home .stats .stat {
+    flex: 1;
+  }
+
+  #home .stats .stat + .stat {
+    border-left: 1px solid var(--brand-ligth);
+  }
+
+  .stat h3 {
+    font-size: 4.8rem;
+    font-weight: 700;
+  }
+
+  .stat p {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+
+  #home button:hover {
+    transform: scale(1.03);
+    transition: 1s;
+  }
+
+  #home button {
+    transition: 1s;
+  }
+
+  #home::before {
+    height: calc(78% + var(--nav-heigth));
+  }
+
+  /************************ servicos ***************************/
+
+  #services .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /************************ about ***************************/
+
+  #about .col-b img {
+    width: 48rem;
+    height: 48rem;
+  }
+
+  #about .col-a {
+    align-self: center;
+    text-align: left;
+  }
+
+  #about .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'B A';
+  }
+
+  /************************ contato ***************************/
+  #contact .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'A B';
+  }
+
+  #contact .col-a {
+    align-self: center;
+  }
+
+  #contact .col-a button {
+    margin: 0;
+    margin-top: 4rem;
+  }
+
+  #contact .col-b img {
+    width: 57.5rem;
+    height: 37.9rem;
+  }
+
+  /************************ foter ***************************/
+
+  #footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #footer .col-b {
+    align-self: center;
+  }
+
+  #footer .col-a p {
+    margin-block: 1.5rem;
+  }
+}
